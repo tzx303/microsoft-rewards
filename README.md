@@ -1,0 +1,2 @@
+# microsoft-rewards
+auto bing.
