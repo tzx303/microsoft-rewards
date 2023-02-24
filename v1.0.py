@@ -27,9 +27,7 @@ headers = {
 next_arg = ''
 while True:
     req_url = url + random_str(random.randint(3, 16)) + '/'
-    print(req_url)
     req = requests.get(url=req_url, headers=headers).content.decode('utf-8')
-    print(req)
     doc = etree.HTML(req)
     score = doc.xpath('//span[@id="id_rc"]/text()')
     if next_arg == score:
