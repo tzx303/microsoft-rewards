@@ -36,7 +36,7 @@ def get_score(html):
 while True:
     req_url = url + random_str(random.randint(3, 16)) + '/'
     print(req_url)
-    req = requests.get(url=req_url, headers=headers).text
+    req = requests.get(url=req_url, headers=headers).content.decode('utf-8')
     print(req)
     if not get_score(req):
         break
