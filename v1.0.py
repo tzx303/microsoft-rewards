@@ -37,6 +37,7 @@ while True:
     req_url = url + random_str(random.randint(3, 16)) + '/'
     print(req_url)
     req = requests.get(url=req_url, headers=headers).text
+    print(req)
     if not get_score(req):
         break
     time.sleep(random.uniform(3, 15))
