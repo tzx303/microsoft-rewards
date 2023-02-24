@@ -27,7 +27,7 @@ headers = {
 def get_score(html):
     doc = etree.HTML(html)
     score = doc.xpath('//a[@class="id_button toolTip"]/text()')
-    if score = next:
+    if score == next:
         return False
     next = score
     return True
