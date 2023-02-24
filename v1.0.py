@@ -1,6 +1,20 @@
 import requests
+import random
+import time
 
-url = "https://bing.com/"
+def random_str(length): 
+    # 生成随机字符串 
+    str = '' 
+    chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789' 
+    length = len(chars) - 1 
+    random = Random() 
+    for i in range(length): 
+        str+=chars[random.randint(0, length)] 
+    return str 
+ 
+#打印随机字符串
+print(random_str(8))
+url = "https://bing.com/search?q="
 headers = {
   ":authority":" cn.bing.com",
   ":method":" GET",
@@ -28,4 +42,6 @@ headers = {
   "upgrade-insecure-requests":" 1",
   "user-agent":" Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36"
   }
-req = requests.get(url=url,headers=headers).t
+while True:                                                                        
+  req = requests.get(url=url+random_str(random.randint(3,16)),headers=headers).text
+  time.sleep(random.uniform(3, 15))
