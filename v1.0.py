@@ -24,7 +24,7 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36'
 }
 
-def get_score(html){
+def get_score(html):
     doc = etree.HTML(html)
     score = doc.xpath('//a[@class="id_button toolTip"]/text()')
     if score = next:
