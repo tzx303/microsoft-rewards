@@ -28,13 +28,13 @@ def get_score(html):
     doc = etree.HTML(html)
     score = doc.xpath('//a[@class="id_button toolTip"]/text()')
     print("目前分数：",score)
-    if score == next:
+    if score[0] == next:
         return False
-    next = score
+    next = score[0]
     return True
     
 while True:
-    req_url = url + random_str(random.randint(3, 16)) + '&form=QBLH&sp=-1&pq=l%27l&sc=10-3&qs=n&sk=&cvid=9B211655CAEF47DD8E2735A15C58C4AF&ghsh=0&ghacc=0&ghpl=&mkt=zh-CN/'
+    req_url = url + random_str(random.randint(3, 16)) + '/'
     print(req_url)
     req = requests.get(url=req_url, headers=headers).text
     if not get_score(req):
