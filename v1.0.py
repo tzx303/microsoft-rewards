@@ -6,8 +6,7 @@ def random_str(length):
     # 生成随机字符串 
     str = '' 
     chars = 'AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789!@#$%^&*(){}[]:' 
-    length = len(chars) - 1 
-    random = Random() 
+    length = len(chars) - 1
     for i in range(length): 
         str+=chars[random.randint(0, length)] 
     return str 
