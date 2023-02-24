@@ -6,6 +6,8 @@ name: v1.0
 on:
   push:
     branches: [ "main" ]
+  schedule:
+    - cron: '0 0 * * *'
 
 permissions:
   contents: write
