@@ -13,7 +13,6 @@ def random_str(length):
     return str 
  
 #打印随机字符串
-print(random_str(8))
 url = "https://bing.com/search?q="
 headers = {
   ":authority":" cn.bing.com",
